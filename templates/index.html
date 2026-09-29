@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="EduGenie AI Learning Assistant"
+    >
+
+    <title>
+        EduGenie - AI Learning Assistant
+    </title>
+    <link
+    rel="stylesheet"
+    href="{{ url_for('static', path='style.css') }}"
+>
+
+   
+
+</head>
+
+
+<body>
+
+    <main class="container">
+
+        <!-- HEADER -->
+
+        <header class="hero">
+
+            <div class="badge">
+                AI LEARNING ASSISTANT
+            </div>
+
+            <h1>
+                EduGenie
+            </h1>
+
+            <p>
+                Your AI-powered learning companion
+            </p>
+
+        </header>
+
+
+        <!-- MAIN CARD -->
+
+        <section class="card">
+
+            <label for="task">
+                Choose a task
+            </label>
+
+            <select id="task">
+
+                <option value="qa">
+                    Ask a Question
+                </option>
+
+                <option value="explain">
+                    Explain a Concept
+                </option>
+
+                <option value="quiz">
+                    Generate Quiz
+                </option>
+
+                <option value="summarize">
+                    Summarize Text
+                </option>
+
+                <option value="learn">
+                    Learning Path
+                </option>
+
+            </select>
+
+
+            <label for="inputText">
+                Enter your text
+            </label>
+
+            <textarea
+                id="inputText"
+                rows="10"
+                placeholder="Example: Which is the largest ocean?"
+            ></textarea>
+
+
+            <!-- BUTTONS -->
+
+            <div class="actions">
+
+                <button
+                    id="submitBtn"
+                >
+                    Generate
+                </button>
+
+                <button
+                    id="clearBtn"
+                    class="secondary"
+                >
+                    Clear
+                </button>
+
+            </div>
+
+
+            <!-- STATUS -->
+
+            <div
+                id="status"
+                class="status"
+                role="status"
+            ></div>
+
+
+            <!-- RESULT -->
+
+            <section
+                id="result"
+                class="result"
+                aria-live="polite"
+            ></section>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <span>
+                EduGenie
+            </span>
+
+            <span>
+                FastAPI + Google Gemini
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script
+        src="{{ url_for('static', path='app.js') }}"
+    ></script>
+
+</body>
+
+</html>
